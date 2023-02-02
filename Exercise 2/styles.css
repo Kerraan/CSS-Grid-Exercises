@@ -17,6 +17,14 @@ body {
     max-width: 1440px;
     margin: 100px auto;
     padding: 20px;
+    display: grid;
+    column-gap: 30px;
+    row-gap: 35px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "nelson nelson marylin abraham"
+    "nelson nelson marylin abraham"
+    "bob marie marie abraham";
 }
 
 .card {
@@ -24,7 +32,6 @@ body {
     border-radius: 10px;
     padding: 30px;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-    margin-bottom: 10px;
 }
 
 .card__header {
@@ -69,16 +76,28 @@ body {
     background-image: url('./images/bg-pattern-quotation.svg');
     background-repeat: no-repeat;
     background-position: top 10px right 100px;
+    grid-area: nelson;
 }
 
 .card--bg-gray-blue {
     background: hsl(217, 19%, 35%);
     color: #fff;
+    grid-area: marylin;
+    height: 100%;
 }
 
 .card--bg-black-blue {
     background: hsl(219, 29%, 14%);
     color: #fff;
+    grid-area: marie
+}
+
+.bob {
+    grid-area: bob;
+}
+
+.abraham {
+    grid-area: abraham;
 }
 
 footer {
