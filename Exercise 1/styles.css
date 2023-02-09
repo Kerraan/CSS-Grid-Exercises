@@ -13,6 +13,13 @@ body {
     max-width: 1440px;
     height: 100vh;
     padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 80px auto 80px;
+    grid-template-areas:
+    "header header header"
+    "navigation content sidebar"
+    "navigation footer footer";
 }
 
 header,
@@ -25,3 +32,25 @@ footer {
     padding: 20px;
     border: #08313a 1px solid;
 }
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: content;
+}
+
+nav {
+    grid-area: navigation;
+}
+
+aside {
+    grid-area: sidebar;
+}
+
+footer {
+    grid-area: footer;
+}
+
+

@@ -11,21 +11,36 @@
     margin: 8px;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 4fr 1fr;
+}
+
 .box-1 {
     background-color: #f1e0c5;
+    grid-column: 1/-1;
 }
 .box-2 {
     background-color: #c9b79c;
+    grid-column: 2/3;
 }
 .box-3 {
     background-color: #71816d;
+    grid-column: 1/2;
+    grid-row: 2/4;
 }
 .box-4 {
     background-color: #342a21;
+    grid-column: 2/3;
+    grid-row: 3/4;
 }
 .box-5 {
     background-color: #da667b;
+    grid-column: 3/4;
+    grid-row: 2/4;
 }
 .box-6 {
     background-color: #00272b;
+    grid-column: -4/-1;
 }
